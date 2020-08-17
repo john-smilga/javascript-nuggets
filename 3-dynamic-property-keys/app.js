@@ -21,7 +21,6 @@ const name = 'computer';
 const product = {
   [moreInfo]: true,
 };
-console.log(product[moreInfo]);
 
 product[name] = 'random value';
 console.log(product);
@@ -30,15 +29,15 @@ const state = {
   products: [],
 };
 
-function addKeys(key, value) {
+function updateState(key, value) {
   state[key] = value;
 }
 
-addKeys('john', 24);
-addKeys('peter', 30);
-addKeys('items', []);
-addKeys('featured', true);
+updateState('john', 24);
+updateState('peter', 30);
+updateState('items', []);
+updateState('featured', true);
 
-addKeys('john', 45);
-addKeys('products', ['first item']);
+updateState('john', 45);
+updateState('products', ['first item']);
 console.log(state);
