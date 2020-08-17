@@ -2,9 +2,9 @@
 const person = {
   name: 'john',
 };
-person.age = 25;
 console.log(person.name);
-console.log(person.age);
+person.age = 25;
+console.log(person);
 
 // square bracket notation
 const items = {
@@ -13,13 +13,18 @@ const items = {
 console.log(items['featured-items']);
 console.log(person['name']);
 
-let moreInfo = 'on sale';
+let moreInfo = 'featured';
+moreInfo = 'on sale';
+
+const name = 'computer';
 
 const product = {
   [moreInfo]: true,
 };
-
 console.log(product[moreInfo]);
+
+product[name] = 'random value';
+console.log(product);
 
 const state = {
   products: [],
