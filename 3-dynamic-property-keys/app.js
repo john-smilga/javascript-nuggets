@@ -13,31 +13,32 @@ const items = {
 console.log(items['featured-items']);
 console.log(person['name']);
 
-let moreInfo = 'featured';
-moreInfo = 'on sale';
+let appState = 'loading';
+appState = 'error';
 
-const name = 'computer';
+const keyName = 'computer';
 
 const product = {
-  [moreInfo]: true,
+  [appState]: true,
 };
 
-product[name] = 'random value';
+product[keyName] = 'apple';
 console.log(product);
 
 const state = {
-  products: [],
+  loading: true,
+  name: '',
+  job: '',
 };
 
 function updateState(key, value) {
   state[key] = value;
 }
 
-updateState('john', 24);
-updateState('peter', 30);
-updateState('items', []);
-updateState('featured', true);
+updateState('name', 'john');
+updateState('job', 'developer');
+updateState('loading', false);
 
-updateState('john', 45);
-updateState('products', ['first item']);
+updateState('products', []);
+updateState('name', 'peter');
 console.log(state);
