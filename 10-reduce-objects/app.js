@@ -1,5 +1,4 @@
 // Reduce - Objects
-
 // cart example
 const cart = [
   {
@@ -27,12 +26,10 @@ const cart = [
 let { totalItems, cartTotal } = cart.reduce(
   (total, cartItem) => {
     const { amount, price } = cartItem
-
     // count items
     total.totalItems += amount
     // count sum
     total.cartTotal += amount * price
-
     return total
   },
   {
@@ -43,7 +40,6 @@ let { totalItems, cartTotal } = cart.reduce(
 cartTotal = parseFloat(cartTotal.toFixed(2))
 // console.log(total)
 console.log(totalItems, cartTotal)
-
 // github repos example
 
 const url = 'https://api.github.com/users/john-smilga/repos?per_page=100'
