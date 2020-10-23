@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 /*
 =============== 
 Variables
@@ -7,20 +6,20 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(21, 91%, 17%);
-  --clr-primary-2: hsl(21, 84%, 25%);
-  --clr-primary-3: hsl(21, 81%, 29%);
-  --clr-primary-4: hsl(21, 77%, 34%);
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
   /* primary/main color */
-  --clr-primary-5: hsl(21, 62%, 45%);
+  --clr-primary-5: hsl(205, 78%, 60%);
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(21, 57%, 50%);
-  --clr-primary-7: hsl(21, 65%, 59%);
-  --clr-primary-8: hsl(21, 80%, 74%);
-  --clr-primary-9: hsl(21, 94%, 87%);
-  --clr-primary-10: hsl(21, 100%, 94%);
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
   /* darkest grey - used for headings */
-  --clr-grey-1: #102a42;
+  --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
@@ -37,7 +36,6 @@ Variables
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
-
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;

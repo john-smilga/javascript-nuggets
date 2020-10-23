@@ -1,37 +1,71 @@
-// Rest Operator...
-// gathers/collects items
-// destructuring, functions
-// placement important, careful with the same name
-// rest when declare function, spread when invoke the function
+// Reduce - Objects
 
-// arrays
-const fruits = ['apple', 'orange', 'lemon', 'banana', 'pear'];
-const [first, second, ...restOfTheFruits] = fruits;
+// cart example
+const cart = [
+  {
+    title: 'Samsung Galaxy S7',
+    price: 599.99,
+    amount: 1,
+  },
+  {
+    title: 'google pixel ',
+    price: 499.99,
+    amount: 2,
+  },
+  {
+    title: 'Xiaomi Redmi Note 2',
+    price: 699.99,
+    amount: 4,
+  },
+  {
+    title: 'Xiaomi Redmi Note 5',
+    price: 399.99,
+    amount: 3,
+  },
+]
 
-console.log(first, restOfTheFruits);
+let { totalItems, cartTotal } = cart.reduce(
+  (total, cartItem) => {
+    const { amount, price } = cartItem
 
-const specificFruit = restOfTheFruits.find((fruit) => fruit === 'lemon');
-console.log(specificFruit);
+    // count items
+    total.totalItems += amount
+    // count sum
+    total.cartTotal += amount * price
 
-// objects
-const person = { name: 'john', lastName: 'smith', job: 'developer' };
-const { job, ...rest } = person;
-console.log(job, rest);
+    return total
+  },
+  {
+    totalItems: 0,
+    cartTotal: 0,
+  }
+)
+cartTotal = parseFloat(cartTotal.toFixed(2))
+// console.log(total)
+console.log(totalItems, cartTotal)
 
-// functions
+// github repos example
 
-const getAverage = (name, ...scores) => {
-  console.log(name);
-  console.log(scores);
-  const average =
-    scores.reduce((total, item) => {
-      return (total += item);
-    }, 0) / scores.length;
-  console.log(average);
-};
+const url = 'https://api.github.com/users/john-smilga/repos?per_page=100'
 
-// getAverage(person.name,67,78,89,78)
+const fetchRepos = async () => {
+  const response = await fetch(url)
+  const data = await response.json()
+  const newData = data.reduce((total, repo) => {
+    const { language } = repo
+    // if (language) {
+    //   if (total[language]) {
+    //     total[language] = total[language] + 1
+    //   } else {
+    //     total[language] = 1
+    //   }
+    // }
+    if (language) {
+      total[language] = total[language] + 1 || 1
+    }
+    return total
+  }, {})
+  console.log(newData)
+}
 
-const testScores = [67, 78, 99, 100];
-
-getAverage(person.name, ...testScores);
+fetchRepos()
