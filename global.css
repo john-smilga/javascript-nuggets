@@ -120,3 +120,8 @@ p {
     line-height: 1;
   }
 }
+
+.title {
+  text-align: center;
+  margin-top: 2rem;
+}
