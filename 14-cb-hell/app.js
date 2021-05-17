@@ -1,5 +1,4 @@
 //  Javascript Nuggets - Callback Hell
-
 // after 1s first red;
 // after 3s second blue; 4s
 // after 2s third green; 6s
@@ -20,5 +19,5 @@ btn.addEventListener('click', () => {
         third.style.color = 'green'
       }, 2000)
     }, 3000)
-  }, 5000)
+  }, 1000)
 })
