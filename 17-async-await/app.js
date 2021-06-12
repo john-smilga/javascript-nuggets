@@ -5,17 +5,14 @@
 // error handling - try/catch block
 
 // const example = async () => {
-// async function example()
+//   return 'hello there'
 // }
-
-// console.log(example())
 
 // async function someFunc() {
 //   const result = await example()
 //   console.log(result)
+//   console.log('hello world')
 // }
-
-// someFunc()
 
 const users = [
   { id: 1, name: 'john' },
@@ -34,17 +31,14 @@ const getData = async () => {
     const user = await getUser('john')
     if (user) {
       const articles = await getArticles(user.id)
-      // do something about articles
       // console.log(articles)
-      // return articles
+      return articles
     }
   } catch (error) {
     console.log(error)
   }
 }
-
-getData()
-
+console.log(getData())
 // getUser('susan')
 //   .then((user) => getArticles(user.id))
 //   .then((articles) => console.log(articles))
