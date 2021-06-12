@@ -1,13 +1,17 @@
-//  Promises
+// Javascript Nuggets - Promises
+
+// async await
+// consume/use promises
+
 // Pending, Rejected, FulFilled
 
 const value = 2
 
 const promise = new Promise((resolve, reject) => {
   const random = Math.floor(Math.random() * 3)
-
+  console.log(random)
   if (random === value) {
-    resolve(`you guessed correctly`)
+    resolve('you guessed correctly')
   } else {
     reject('wrong number')
   }
@@ -15,8 +19,4 @@ const promise = new Promise((resolve, reject) => {
 
 console.log(promise)
 
-promise
-  .then((value) => console.log(value))
-  .catch((error) => {
-    console.log(error)
-  })
+promise.then((data) => console.log(data)).catch((err) => console.log(err))
