@@ -29,11 +29,8 @@ const articles = [
 const getData = async () => {
   try {
     const user = await getUser('john')
-    if (user) {
-      const articles = await getArticles(user.id)
-      // console.log(articles)
-      return articles
-    }
+    const articles = await getArticles(user.id)
+    console.log(articles)
   } catch (error) {
     console.log(error)
   }
