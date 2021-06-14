@@ -35,7 +35,7 @@ const getData = async () => {
     console.log(error)
   }
 }
-console.log(getData())
+getData()
 // getUser('susan')
 //   .then((user) => getArticles(user.id))
 //   .then((articles) => console.log(articles))
