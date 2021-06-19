@@ -9,18 +9,18 @@ const url = 'https://www.course-api.com/react-tours-project'
 // console.log(fetch(url))
 
 // fetch(url)
-//   .then((response) => response.json())
+//   .then((resp) => resp.json())
 //   .then((data) => console.log(data))
 //   .catch((err) => console.log(err))
 
 const getTours = async () => {
   try {
-    const response = await fetch(url)
-    const data = await response.json()
-    console.log(data)
+    const resp = await fetch(url)
+
+    return resp.json()
+    // console.log(data)
   } catch (error) {
     console.log(error)
   }
 }
-
-console.log(getTours())
+console.log(getTours().then())
