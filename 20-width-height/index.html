@@ -6,6 +6,9 @@
     <title>Javascript Nuggets</title>
     <link rel="stylesheet" href="../global.css" />
     <style>
+      body {
+        min-height: 130vh;
+      }
       h1 {
         text-align: center;
       }
@@ -15,11 +18,20 @@
         margin: 0 auto;
         margin-top: 3rem;
       }
+      .box {
+        width: 150px;
+        height: 150px;
+        background: grey;
+        margin: 0 auto;
+        margin-top: 4rem;
+        margin-left: -1rem;
+      }
     </style>
   </head>
   <body>
-    <h1>Fetch Errors</h1>
-    <button class="btn">Fetch Tours</button>
+    <h1>Width/Height</h1>
+    <button class="btn">Get Dimensions</button>
+    <div class="box"></div>
     <script src="./app.js"></script>
   </body>
 </html>

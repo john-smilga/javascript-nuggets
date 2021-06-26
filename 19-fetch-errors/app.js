@@ -8,16 +8,17 @@ const url = 'https://www.course-api.com/react-tours-projects'
 const getTours = async () => {
   try {
     const resp = await fetch(url)
-    console.log(resp)
     if (!resp.ok) {
-      const msg = `There was an error : "${resp.status} ${resp.statusText}"`
+      const msg = `There was an error "${resp.status} ${resp.statusText}"`
       throw new Error(msg)
     }
-    const data = await resp.json()
-    console.log(data)
+
+    const tours = await resp.json()
+    console.log(tours)
   } catch (error) {
     console.log(error)
   }
 }
 
-getTours()
+const btn = document.querySelector('.btn')
+btn.addEventListener('click', getTours)
