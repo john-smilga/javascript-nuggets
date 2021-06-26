@@ -1,8 +1,8 @@
 // Javascript Nuggets
 // Width/Height - window, any element
-// innerHeight
-// innnerWidth
-// getBoundingClientRect
+// innerHeight - window
+// innnerWidth - window
+// getBoundingClientRect() - any element
 
 console.log('height', window.innerHeight)
 console.log('width', window.innerWidth)
