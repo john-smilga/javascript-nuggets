@@ -20,6 +20,7 @@ const channel = 'Coding Addict';
 console.log(channel.at(0));
 
 // first turn into a module
+// use extension not file system
 const resp = await fetch('https://www.course-api.com/react-tabs-project');
 const data = await resp.json();
 console.log(data);
