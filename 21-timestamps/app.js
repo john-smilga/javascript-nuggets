@@ -21,18 +21,17 @@ setTimeout(() => {
 let people = [];
 people = [...people, { id: Date.now(), name: 'peter' }];
 
-// setTimeout(() => {
-//   people = [...people, { id: Date.now(), name: 'john' }];
-//   console.log(people);
-// }, 1000);
+setTimeout(() => {
+  people = [...people, { id: Date.now(), name: 'john' }];
+  console.log(people);
+}, 1000);
 
 // create/get dates
-console.log(new Date(1132713260838));
+console.log(new Date(1632961557647));
 const now = Date.now();
-const futureDate = new Date(now + 60000);
+const futureDate = new Date(now + 1000 * 60);
 console.log(futureDate);
 console.log(new Date());
-
 // difference between dates
 const firstDate = new Date();
 const secondDate = new Date(2021, 8, 28);
@@ -42,8 +41,10 @@ const secondValue = secondDate.getTime();
 
 console.log(firstValue);
 console.log(secondValue);
+
 const timeDifference = secondValue - firstValue;
 
+console.log(timeDifference);
 const minutes = timeDifference / (1000 * 60);
 console.log(minutes);
 
